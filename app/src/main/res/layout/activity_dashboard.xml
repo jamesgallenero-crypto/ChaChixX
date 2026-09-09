@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F7CDD7"
     tools:context=".Dashboard">
 
 
@@ -25,15 +26,16 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:background="@drawable/bg_circle_white"
-            android:src="@drawable/bg_circle_white"
+            android:src="@drawable/prof1"
             android:scaleType="centerCrop"
             android:contentDescription="Profile photo" />
         <ImageView
-            android:id="@+id/notificationBell"
+            android:id="@+id/notif"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
+            android:src="@drawable/bell"
             android:background="@drawable/bg_circle_white_translucent"
             android:padding="8dp"
             android:contentDescription="Notifications" />
@@ -42,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/profileImage"
-            android:layout_toStartOf="@id/notificationBell"
+            android:layout_toStartOf="@id/notif"
             android:layout_alignTop="@id/profileImage"
             android:layout_marginStart="12dp"
             android:text="Lordan Canchico"
@@ -55,7 +57,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/userName"
             android:layout_toEndOf="@id/profileImage"
-            android:layout_toStartOf="@id/notificationBell"
+            android:layout_toStartOf="@id/notif"
             android:layout_marginStart="12dp"
             android:layout_marginTop="2dp"
             android:text="Ecoland, Davao City"
@@ -78,6 +80,7 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="center_vertical"
+        android:background="#FFFFFF"
         android:paddingStart="16dp"
         android:paddingEnd="16dp">
     <EditText
@@ -101,26 +104,33 @@
         android:background="@drawable/bg_bottom_nav"
         android:gravity="center_vertical">
     <ImageView
+        android:id="@+id/home"
         android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_weight="1"
+        android:src="@drawable/home"
         android:contentDescription="Home" />
     <ImageView
         android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_weight="1"
+        android:src="@drawable/water"
         android:contentDescription="Favorites" />
 
     <ImageView
+        android:id="@+id/cart"
         android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_weight="1"
+        android:src="@drawable/cart"
         android:contentDescription="Cart" />
 
     <ImageView
+        android:id="@+id/profile"
         android:layout_width="0dp"
-        android:layout_height="24dp"
+        android:layout_height="30dp"
         android:layout_weight="1"
+        android:src="@drawable/profile"
         android:contentDescription="Profile" />
     </LinearLayout>
     <ScrollView
@@ -135,6 +145,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:background="#F7CDD7"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:paddingTop="20dp">
@@ -157,6 +168,7 @@
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:contentDescription="Exclusive offer banner" />
+
     </androidx.cardview.widget.CardView>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -200,12 +212,6 @@
         android:textColor="#C2185B"
         android:textStyle="bold"
         android:textSize="16sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="See All"
-        android:textColor="#C2185B"
-        android:textSize="13sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

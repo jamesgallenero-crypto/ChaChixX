@@ -10,22 +10,17 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Dashboard extends AppCompatActivity {
+public class Inventory extends AppCompatActivity {
 
-    ImageView home,cart, profile, notif;
-
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_dashboard);
-        home = findViewById(R.id.home);
-        cart = findViewById(R.id.cart);
-        profile = findViewById(R.id.profile);
-        notif = findViewById(R.id.notif);
-        profile.setOnClickListener(v -> {
-            Intent intent = new Intent(Dashboard.this, Settings.class);
+        back = findViewById(R.id.back);
+        back.setOnClickListener(v -> {
+            Intent intent = new Intent(Inventory.this, MainActivity.class);
             startActivity(intent);
             finish();
         });
